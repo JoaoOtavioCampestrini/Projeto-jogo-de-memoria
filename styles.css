@@ -31,6 +31,8 @@ p {
 }
 
 
+
+
 .game-board {
     display: grid;
     grid-template-columns: repeat(4, 100px);
@@ -50,9 +52,10 @@ p {
     border-radius: 10px; 
 }
 
+
 .card img {
-    width: 80%;
-    height: 80%;
+    width: 90%;
+    height: 90%;
     display: none;
     border-radius: 10px; 
 }
@@ -62,27 +65,13 @@ p {
    
 }
 
+
+
 .card.matched {
     background-color: #2ecc71;
     cursor: default;
 }
 
-
-#restart-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: gainsboro;
-    color: black;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#restart-button:hover {
-    background-color: rgb(255, 251, 42);
-}
 
 
 .card:hover {
@@ -90,4 +79,13 @@ p {
     transition: transform 0.4s ease;
 }
 
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
 
+body {
+    background-image: url('assets/cat-pizza.gif');
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+}
